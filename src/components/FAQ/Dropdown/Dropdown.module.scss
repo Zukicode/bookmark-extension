@@ -1,0 +1,89 @@
+.dropdown {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	list-style: none;
+	cursor: pointer;
+	border-bottom: 1.5px solid #e0e0e0;
+	padding: 25px 0px;
+	transition: all 0.4s;
+
+	&:hover {
+		transition: all 0.4s;
+
+		.headerQuestion {
+			.title {
+				transition: all 0.4s;
+				color: var(--soft-red);
+			}
+		}
+	}
+
+	.headerQuestion {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+
+		.title {
+			font-size: 19px;
+			font-weight: 400;
+			color: var(--dark-blue);
+			transition: all 0.4s;
+
+			@media (max-width: 768px) {
+				font-size: 16px;
+			}
+		}
+
+		button {
+			cursor: pointer;
+			background: none;
+			border: none;
+			transition: all 0.4s;
+
+			&.active {
+				svg {
+					transition: all 0.4s;
+					transform: rotate(180deg);
+
+					path {
+						transition: all 0.4s;
+						stroke: var(--soft-red);
+					}
+				}
+			}
+		}
+	}
+
+	.description {
+		position: absolute;
+		z-index: -1000;
+		top: 50px;
+		max-width: 500px;
+		opacity: 0;
+		transition: all 0.4s;
+
+		p {
+			font-size: 16px;
+			line-height: 32px;
+			color: var(--gray);
+			text-align: justify;
+			font-size: 400;
+			transition: all 0.4s;
+
+			@media (max-width: 768px) {
+				font-size: 14px;
+				line-height: 30px;
+			}
+		}
+
+		&.active {
+			transition: all 0.4s;
+			position: relative;
+			top: 0;
+			opacity: 1;
+			z-index: 0;
+		}
+	}
+}

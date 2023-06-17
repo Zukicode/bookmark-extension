@@ -1,0 +1,95 @@
+.browser {
+	width: 300px;
+	height: 375px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	border-radius: 10px;
+	box-shadow: 0px 10px 10px #e6e6ea;
+
+	@media (max-width: 768px) {
+		padding: 20px 0px;
+	}
+
+	@media (max-width: 330px) {
+		width: 270px;
+	}
+
+	&.chrome {
+		position: relative;
+		top: 0px;
+
+		@media (max-width: 768px) {
+			top: 0;
+		}
+	}
+
+	&.firefox {
+		position: relative;
+		top: 75px;
+
+		@media (max-width: 768px) {
+			top: 0;
+		}
+	}
+
+	&.opera {
+		position: relative;
+		top: 150px;
+
+		@media (max-width: 768px) {
+			top: 0;
+		}
+	}
+
+	.text {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		text-align: center;
+
+		h1 {
+			color: var(--dark-blue);
+			font-size: 21px;
+		}
+
+		p {
+			color: var(--gray);
+		}
+	}
+
+	.divider {
+		width: 100%;
+		height: 5px;
+		background: url('/assets/bg-dots.svg') no-repeat;
+		background-size: 100%;
+	}
+
+	button {
+		width: 85%;
+		padding: 15px 0px;
+		border-radius: 4px;
+		border: 2px solid transparent;
+		border-radius: 6px;
+		font-weight: 500;
+		font-size: 14px;
+		letter-spacing: 0.5px;
+		color: var(--white);
+		background: var(--soft-blue);
+		transition: all 0.4s;
+
+		@media (max-width: 768px) {
+			font-size: 13px;
+		}
+
+		&:hover {
+			transition: all 0.7s;
+			background: none;
+			color: var(--soft-blue);
+			cursor: pointer;
+			border: 2px solid var(--soft-blue);
+			box-shadow: 0px 7px 30px -10px var(--soft-blue);
+		}
+	}
+}

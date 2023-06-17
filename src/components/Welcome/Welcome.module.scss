@@ -1,0 +1,280 @@
+.welcome {
+	width: 100%;
+	margin-top: 20px;
+	position: relative;
+
+	@media (max-width: 768px) {
+		margin-top: 50px;
+	}
+
+	.content {
+		height: 600px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 80px;
+
+		@media (max-width: 1100px) {
+			gap: 25px;
+		}
+
+		@media (max-width: 768px) {
+			flex-direction: column-reverse;
+			gap: 50px;
+			height: 100%;
+		}
+
+		.welcomeText {
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+			position: relative;
+			animation: 2s welcomeTextFirstAnimation;
+
+			@keyframes welcomeTextFirstAnimation {
+				from {
+					left: -100px;
+					opacity: 0;
+				}
+
+				to {
+					position: relative;
+					opacity: 1;
+					left: 0px;
+				}
+			}
+
+			@media (max-width: 768px) {
+				align-items: center;
+
+				@keyframes welcomeTextFirstAnimation {
+					from {
+						opacity: 0;
+					}
+
+					to {
+						opacity: 1;
+					}
+				}
+			}
+
+			h1 {
+				color: var(--dark-blue);
+				font-size: 50px;
+				font-weight: 500;
+				width: 100%;
+				max-width: 500px;
+
+				@media (max-width: 1300px) {
+					font-size: 46px;
+				}
+
+				@media (max-width: 1250px) {
+					font-size: 36px;
+					max-width: 400px;
+				}
+
+				@media (max-width: 1000px) {
+					font-size: 30px;
+					max-width: 300px;
+				}
+
+				@media (max-width: 768px) {
+					text-align: center;
+				}
+
+				@media (max-width: 350px) {
+					font-size: 26px;
+				}
+
+				@media (max-width: 330px) {
+					font-size: 20px;
+				}
+			}
+
+			p {
+				color: var(--gray);
+				width: 100%;
+				max-width: 500px;
+				font-size: 18px;
+				line-height: 27px;
+
+				@media (max-width: 1000px) {
+					font-size: 16px;
+				}
+
+				@media (max-width: 768px) {
+					text-align: center;
+					max-width: 300px;
+					font-size: 15px;
+					line-height: 25px;
+				}
+
+				@media (max-width: 350px) {
+					font-size: 14px;
+					line-height: 23px;
+				}
+			}
+
+			.welcomeButtons {
+				display: flex;
+				align-items: center;
+				gap: 20px;
+
+				@media (max-width: 350px) {
+					flex-direction: column;
+				}
+
+				button {
+					width: 175px;
+					height: 50px;
+					border: 2px solid transparent;
+					border-radius: 6px;
+					font-weight: 500;
+					font-size: 15px;
+
+					@media (max-width: 1000px) {
+						width: 125px;
+						height: 40px;
+						font-size: 13px;
+					}
+
+					@media (max-width: 768px) {
+						width: 150px;
+						height: 50px;
+						font-size: 13px;
+					}
+				}
+
+				button:first-child {
+					color: var(--white);
+					background: var(--soft-blue);
+					box-shadow: 0px 7px 30px -10px var(--dark-blue);
+					transition: all 0.4s;
+
+					&:hover {
+						transition: all 0.7s;
+						background: none;
+						color: var(--soft-blue);
+						cursor: pointer;
+						border: 2px solid var(--soft-blue);
+						box-shadow: 0px 7px 30px -10px var(--soft-blue);
+					}
+				}
+
+				button:last-child {
+					color: #7b7b7d;
+					background: #f7f7f7;
+					box-shadow: 0px 9px 30px -9px #545460;
+					transition: all 0.4s;
+
+					&:hover {
+						transition: all 0.7s;
+						background: none;
+						cursor: pointer;
+						box-shadow: 0px 7px 30px -10px #7b7b7d;
+						border: 2px solid #7b7b7d;
+					}
+				}
+			}
+		}
+
+		.welcomeImage {
+			img {
+				position: relative;
+				top: 25px;
+				animation: 2s welcomeImageFirstAnimation;
+
+				@keyframes welcomeImageFirstAnimation {
+					from {
+						opacity: 0;
+						left: 100px;
+					}
+
+					to {
+						opacity: 1;
+						left: 0;
+					}
+				}
+
+				@media (max-width: 1200px) {
+					width: 600px;
+				}
+
+				@media (max-width: 1100px) {
+					width: 500px;
+					top: 0px;
+				}
+
+				@media (max-width: 1000px) {
+					width: 400px;
+				}
+
+				@media (max-width: 768px) {
+					@keyframes welcomeImageFirstAnimation {
+						from {
+							opacity: 0;
+						}
+
+						to {
+							opacity: 1;
+						}
+					}
+				}
+
+				@media (max-width: 400px) {
+					width: 350px;
+				}
+
+				@media (max-width: 350px) {
+					width: 280px;
+				}
+			}
+		}
+	}
+
+	.backgroundImage {
+		width: 35%;
+		height: 400px;
+		background-color: var(--soft-blue);
+		border-radius: 40% 0% 0% 40%;
+		position: absolute;
+		bottom: 25px;
+		right: 0;
+		z-index: -1;
+
+		@media (min-width: 1921px) {
+			width: 45%;
+			border-radius: 300px 0% 0% 300px;
+		}
+
+		@media (max-width: 1100px) {
+			height: 350px;
+			bottom: 75px;
+		}
+
+		@media (max-width: 1000px) {
+			height: 250px;
+			bottom: 150px;
+			border-radius: 100px 0px 0px 100px;
+		}
+
+		@media (max-width: 768px) {
+			width: 65%;
+			height: 250px;
+			top: 60px;
+			border-radius: 100px 0px 0px 100px;
+		}
+
+		@media (max-width: 400px) {
+			top: 50px;
+			height: 190px;
+		}
+
+		@media (max-width: 350px) {
+			width: 80%;
+			top: 30px;
+			height: 175px;
+		}
+	}
+}

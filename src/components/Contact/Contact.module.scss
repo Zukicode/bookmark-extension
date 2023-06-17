@@ -1,0 +1,140 @@
+.contact {
+	width: 100%;
+	height: 375px;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--soft-blue);
+
+	.content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 30px;
+
+		@media (max-width: 500px) {
+			gap: 20px;
+		}
+
+		.alreadyText {
+			color: var(--white);
+			letter-spacing: 4px;
+			font-size: 14px;
+
+			@media (max-width: 500px) {
+				font-size: 12px;
+			}
+		}
+
+		h1 {
+			max-width: 450px;
+			color: var(--white);
+			text-align: center;
+			font-weight: 500;
+
+			@media (max-width: 500px) {
+				font-size: 22px;
+				max-width: 300px;
+			}
+
+			@media (max-width: 350px) {
+				font-size: 20pxт;
+			}
+		}
+
+		.contactForm {
+			display: flex;
+			align-items: baseline;
+			gap: 20px;
+
+			@media (max-width: 600px) {
+				flex-direction: column;
+				gap: 10px;
+			}
+
+			.entry {
+				display: flex;
+				flex-direction: column;
+				position: relative;
+				padding: 4px 4px 10px 4px;
+				border-radius: 4px;
+				gap: 10px;
+				transition: all 0.3s;
+
+				&.error {
+					transition: all 0.4s;
+					background: var(--soft-red);
+				}
+
+				input {
+					width: 325px;
+					height: 50px;
+					font-size: 16px;
+					color: var(--dark-gray);
+					border: 2px solid transparent;
+					border-radius: 4px;
+					border: none;
+					padding: 0px 40px 0px 20px;
+
+					@media (max-width: 400px) {
+						width: 275px;
+						font-size: 14px;
+					}
+
+					@media (max-width: 350px) {
+						width: 250px;
+						font-size: 14px;
+					}
+
+					&::placeholder {
+						color: #d0d0d0;
+					}
+				}
+
+				.errorIcon {
+					position: absolute;
+					right: 10px;
+					top: 18.5px;
+					transition: all 0.4s;
+				}
+
+				.errorText {
+					color: var(--white);
+					font-size: 12px;
+					font-style: italic;
+					letter-spacing: 1px;
+					position: relative;
+					left: 10px;
+					transition: all 0.4s;
+				}
+			}
+
+			button {
+				padding: 12px 15px;
+				height: 50px;
+				font-size: 14px;
+				letter-spacing: 1px;
+				font-weight: 500;
+				background-color: var(--soft-red);
+				border: 2px solid transparent;
+				border-radius: 4px;
+				color: var(--white);
+				box-shadow: 0px 0px 10px -3px var(--dark-blue);
+				transition: all 0.4s;
+
+				@media (max-width: 600px) {
+					width: 100%;
+				}
+
+				&:hover {
+					transition: all 0.4s;
+					border: 2px solid var(--soft-red);
+					background: var(--white);
+					color: var(--soft-red);
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

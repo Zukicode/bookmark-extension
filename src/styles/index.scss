@@ -1,0 +1,28 @@
+@use './font';
+@use './normalize';
+
+:root {
+	--soft-blue: hsl(231, 69%, 60%);
+	--soft-red: hsl(0, 94%, 66%);
+	--gray: hsl(229, 8%, 60%);
+	--dark-gray: #5d5d67;
+	--white: hsl(0, 0%, 100%);
+	--dark-blue: hsl(229, 31%, 21%);
+}
+
+body {
+	background: var(--white);
+}
+
+::-webkit-scrollbar {
+	width: 7px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--white);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--soft-blue);
+	border-radius: 10px;
+}
